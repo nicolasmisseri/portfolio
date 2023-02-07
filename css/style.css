@@ -1,0 +1,155 @@
+:root {
+    --color-letra: white;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+  }
+  a{
+    color:hotpink;
+  }
+  main {
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+    color: white;
+    font-family: monospace;
+  }
+  a {
+    text-decoration: none;
+
+  }
+  a:visited {
+    color: white;
+  }
+  
+  #welcome-section {
+    height: 100vh;
+  }
+  .navbar {
+    position: fixed;
+    top: 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #eeaeca;
+    width: 100vw;
+    height: 50px;
+  }
+
+  .navbar #links {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+  #navbar > #logo {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    align-items: center;
+  }
+  #navbar > div > a {
+    text-decoration: none;
+    padding-right: 2rem;
+    font-size: 2rem;
+  }
+  #navbar > div > a:visited {
+    color: var(--color-letra);
+  }
+  #navbar > div > a:hover {
+    color: white;
+  }
+  #welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  #projects {
+    height: 100vh;
+    background-color: #eeaeca;
+  }
+  #projects-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .project-tile {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4";
+  }
+  #card1 {
+    grid-area: card1;
+  }
+  #card2 {
+    grid-area: card2;
+  }
+  #card3 {
+    grid-area: card3;
+  }
+  #card4 {
+    grid-area: card4;
+  }
+  
+  .profile-link {
+    background-color: white;
+    color: black;
+    width: 15rem;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    width: 50%;
+  }
+  
+  .profile-link > a > img {
+    justify-self: center;
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%);
+  }
+  
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    height: 100vh;
+  }
+  #contact-header {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  #contact-header > p {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  @media only screen and (max-width: 575px) {
+    #navbar > #logo {
+      display: none;
+    }
+    #navbar > #links > a {
+      padding-left: 2rem;
+      padding-right: 0;
+    }
+  
+    .project-tile {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .profile-link {
+      width: 100%;
+    }
+    #contact {
+      text-align: center;
+    }
+  }
